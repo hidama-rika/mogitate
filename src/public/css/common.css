@@ -1,0 +1,31 @@
+body {
+    background-color: #F8F8F8;
+}
+
+.header {
+    display: flex;
+    background-color: #FFFFFF;
+    max-width: 1512px;
+    max-height: 53px;
+    border-bottom: 1px solid #F4F4F4;
+    padding: 10px 20px;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__inner {
+    width: 112px;
+    height: 33px;
+}
+
+.header__logo {
+    color: #F5C800;
+    font-size: 24px;
+    font-family: "Merriweather",
+        serif;
+    font-weight: 900;
+    font-style: italic;
+    text-decoration: none;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
