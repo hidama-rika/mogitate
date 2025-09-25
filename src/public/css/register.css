@@ -1,0 +1,241 @@
+.register-main-container {
+    width: 1512px;
+    height: 930px;
+}
+
+.register-container {
+    background: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1512px;
+    height: auto;
+    padding-top: 10px;
+    gap: 10px;
+}
+
+.section-title {
+    width: 680px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.section-title h2 {
+    margin-bottom: 0;
+}
+
+.register-form {
+    padding: 40px;
+    border-radius: 8px;
+    width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 760px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #4B4B4B;
+}
+
+/* 必須・複数選択可のラベルのスタイル */
+.required,
+.optional {
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px 6px;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.required {
+    background-color: #e53935;
+    color: #fff;
+}
+
+.optional {
+    color: #e53935;
+}
+
+/* チェックボックスの親要素 */
+.custom-checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    /* テキストの選択を無効化 */
+}
+
+/* 実際のチェックボックス（input）を非表示にする */
+.custom-checkbox-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* カスタムのチェックマーク（チェックボックスの代わり） */
+.custom-checkmark {
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-right: 8px;
+    /* ラベルとの間に隙間を作る */
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* チェックされた時のカスタムデザイン */
+.custom-checkbox-label input:checked~.custom-checkmark {
+    border: 1px solid #4B4B4B;
+    /* 例: チェックされた時の色を変更 */
+    background-color: #4B4B4B;
+    color: #FFFFFF;
+}
+
+/* チェックマークのデザイン */
+.custom-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* チェックされた時にチェックマークを表示 */
+.custom-checkbox-label input:checked~.custom-checkmark:after {
+    display: block;
+}
+
+/* チェックマークのスタイル */
+.custom-checkbox-label .custom-checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group input {
+    height: 43px;
+}
+
+.form-group textarea {
+    height: 160px;
+}
+
+/* 画像コンテナ */
+.product__image-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.product__image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+/* ファイル選択ボタン */
+.file-upload {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-upload-label {
+    width: 125px;
+    height: 31px;
+    padding: 3px 6px;
+    background-color: #E0DFDE;
+    border: 1px solid #4B4B4B;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4B4B4B;
+    white-space: nowrap;
+}
+
+.file-name {
+    font-size: 14px;
+    color: #4B4B4B;
+}
+
+/* デフォルトのファイル選択ボタンを完全に非表示にする */
+#file-upload-button {
+    display: none;
+}
+
+.season-options {
+    display: flex;
+    gap: 30px;
+}
+
+.season-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.error-message {
+    color: #e53935;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* ボタンセクション */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 760px;
+    margin: 0 auto;
+}
+
+.return-button,
+.register-button {
+    width: 200px;
+    height: 50px;
+    padding: 13px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.return-button {
+    background-color: #f0f0f0;
+    color: #4B4B4B;
+}
+
+.register-button {
+    background-color: #F5C800;
+    border: none;
+}

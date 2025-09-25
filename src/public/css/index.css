@@ -1,0 +1,255 @@
+/* --- 商品一覧のヘッダー部分 --- */
+.product-list-container {
+    background: #F8F8F8;
+    max-width: 1512px;
+    margin: 0 auto;
+}
+
+.product-list__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    width: 1512px;
+}
+
+/* --- 商品追加ボタン --- */
+.add-button__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #FFA929;
+    color: #4B4B4B;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* --- 商品リストのメインコンテンツ部分 --- */
+.main-content-container {
+    display: flex;
+    width: 1512px;
+    padding: 0 40px;
+}
+
+.product-search-sort {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 240px;
+    flex-shrink: 0;
+    margin-right: 40px;
+}
+
+.product-search {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-search input {
+    width: 100%;
+    /* 親要素の幅いっぱいに広げる */
+    height: 43px;
+    border-radius: 15px;
+    border: 1px solid #E0DFDE;
+    color: #4B4B4B;
+    padding: 11px 10px;
+    margin-bottom: 20px;
+}
+
+.product-search input::placeholder {
+    color: #E0DFDE;
+}
+
+.search-button {
+    border: none;
+    background-color: #F5C800;
+    color: #4B4B4B;
+    cursor: pointer;
+    width: 100%;
+    /* 親要素の幅いっぱいに広げる */
+    height: 44px;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.product-sort {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    gap: 20px;
+    border-bottom: 1px solid #E0DFDE;
+}
+
+.product-sort p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-sort select {
+    color: #4B4B4B;
+    border: 1px solid #E0DFDE;
+    border-radius: 5px;
+    width: 100%;
+    height: 43px;
+    padding: 10px;
+}
+
+/* --- 並び替え条件のタグ部分 --- */
+.sort-tags {
+    margin-top: 20px;
+}
+.sort-tag-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #F5C800;
+    border-radius: 15px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.sort-tag-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #F5C800;
+    border-radius: 15px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.reset-sort {
+    text-decoration: none;
+    color: #F5C800;
+    font-weight: bold;
+    background-color: #fff;
+    border: 1px solid #F5C800;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.product-grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 1162px;
+    height: 790px;
+    gap: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 1162px;
+    height: 720px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 374px;
+    height: 350px;
+}
+
+.product-item__image img {
+    display: flex;
+    width: 374px;
+    height: 281px;
+}
+
+.product-item__content {
+    width: 374px;
+    height: 69px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: #4B4B4B;
+    font-size: 24px;
+}
+
+.product-item a {
+    text-decoration: none;
+    color: inherit;
+    /* リンクの色を親要素から継承 */
+}
+
+/* ページネーション全体を中央に配置するコンテナ */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+/* ページネーションのリスト（ul） */
+.pagination {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 195px;
+    height: 30px;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+/* 各ページアイテム（li） */
+.pagination .page-item {
+    margin: 0 5px;
+}
+
+/* リンクとテキスト（a, span）の共通スタイル */
+.pagination .page-item a,
+.pagination .page-item span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+/* 現在のページ（アクティブ）のスタイル */
+.pagination .page-item.active span {
+    background-color: #F5C800;
+    color: #fff;
+    border-color: #F5C800;
+    border-radius: 50%;
+}
+
+/* 無効化された（disabled）ボタンのスタイル */
+.pagination .page-item.disabled span {
+    color: #ccc;
+    background-color: #f8f8f8;
+    border-color: #f8f8f8;
+    cursor: default;
+}
+
+/* ページリンクにホバーしたときのスタイル */
+.pagination .page-item a:hover {
+    background-color: #f0f0f0;
+}

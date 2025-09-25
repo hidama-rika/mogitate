@@ -1,0 +1,282 @@
+.product-detail-container {
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1512px;
+    padding: 5px 150px;
+    gap: 30px;
+    position: relative;
+}
+
+.product-detail__heading {
+    font-size: 14px;
+    text-align: left;
+    width: 780px;
+    margin-top: 20px;
+}
+
+.product-detail__heading a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.product-detail__heading a:hover {
+    text-decoration: underline;
+}
+
+/* --- 商品詳細セクション --- */
+.product-detail {
+    display: flex;
+    gap: 20px;
+    background-color: #F8F8F8;
+    padding: 38px;
+    width: 850px;
+}
+
+/* --- 画像コンテナ --- */
+.product-detail__image {
+    flex: 1;
+    height: auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.product-detail__info {
+    flex: 1;
+}
+
+.product-detail__image img {
+    width: 100%;
+    height: 281px;
+    object-fit: cover;
+}
+
+/* --- ファイルアップロードセクション --- */
+.file-upload {
+    display: flex;
+    align-items: center;
+    width: 222px;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.file-upload-label {
+    width: 125px;
+    height: 31px;
+    padding: 5px 10px;
+    background-color: #E0DFDE;
+    border: 1px solid #4B4B4B;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4B4B4B;
+    white-space: nowrap;
+}
+
+.file-upload input[type="file"] {
+    display: none;
+}
+
+.file-name {
+    font-size: 14px;
+    color: #4B4B4B;
+}
+
+/* --- フォームグループ（ラベルと入力欄を縦並びに） --- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    margin-bottom: 15px;
+    color: #4B4B4B;
+}
+
+.form-label {
+    color: #4B4B4B;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    color: #4B4B4B;
+}
+
+.form-group textarea {
+    width: 800px;
+    height: 160px;
+    align-items: center;
+}
+
+/* --- 季節のチェックボックス --- */
+.season-options {
+    display: flex;
+    width: 314px;
+    height: 43px;
+    padding-top: 4.5px;
+    padding-bottom: 4.5px;
+    gap: 50px;
+}
+
+/* チェックボックスの親要素 */
+.custom-checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    /* テキストの選択を無効化 */
+}
+
+/* 実際のチェックボックス（input）を非表示にする */
+.custom-checkbox-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* カスタムのチェックマーク（チェックボックスの代わり） */
+.custom-checkmark {
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-right: 8px;
+    /* ラベルとの間に隙間を作る */
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* チェックされた時のカスタムデザイン */
+.custom-checkbox-label input:checked~.custom-checkmark {
+    border: 1px solid #4B4B4B;
+    /* 例: チェックされた時の色を変更 */
+    background-color: #4B4B4B;
+    color: #FFFFFF;
+}
+
+/* チェックマークのデザイン */
+.custom-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* チェックされた時にチェックマークを表示 */
+.custom-checkbox-label input:checked~.custom-checkmark:after {
+    display: block;
+}
+
+/* チェックマークのスタイル */
+.custom-checkbox-label .custom-checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.error-message {
+    color: #e53935;
+    font-size: 14px;
+    height: 18px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+
+/* メッセージのラッパーを作成し、flexboxで縦に並べる */
+.error-message-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: auto;
+}
+
+/* --- 商品説明セクション --- */
+.product-detail__description-wrapper {
+    width: 850px;
+    background-color: #F8F8F8;
+    padding: 38px;
+    border-radius: 8px;
+}
+
+.product-detail__description-wrapper textarea {
+    width: 100%;
+}
+
+/* --- ボタンセクション --- */
+.product-detail__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 820px;
+    position: relative;
+    background-color: #F8F8F8;
+    margin-bottom: 30px;
+    padding: 38px;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    background-color: #F8F8F8;
+}
+
+.return-button,
+.save-button {
+    flex: 1;
+    width: 200px;
+    height: 50px;
+    padding: 13px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    white-space: nowrap;
+    color: #4B4B4B;
+}
+
+.return-button {
+    text-decoration: none;
+}
+
+.save-button {
+    background-color: #F5C800;
+    border: none;
+}
+
+/* 削除ボタンを絶対配置で右端に配置 */
+.delete-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.delete-button img {
+    width: 40px;
+    height: auto;
+}

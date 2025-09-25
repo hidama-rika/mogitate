@@ -1,12 +1,30 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 body {
     background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    /* 残りの利用可能なスペースをすべて占める */
 }
 
 .header {
     display: flex;
     background-color: #FFFFFF;
-    max-width: 1512px;
-    max-height: 53px;
+    width: 1512px;
+    height: 53px;
     border-bottom: 1px solid #F4F4F4;
     padding: 10px 20px;
     align-items: center;
