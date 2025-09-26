@@ -89,7 +89,7 @@ view ファイルの作成
 
     ・　MySQL
 
-    ・　JavaScript（ページネーション）
+    ・　JavaScript（画像表示）
 
 ## ER 図
 
