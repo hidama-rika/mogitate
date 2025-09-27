@@ -17,13 +17,14 @@
             <div class="product-detail">
                 <div class="product-detail__image">
                     <div class="product__image-container">
-                        @if (session()->has('errors') && is_string(old('image')))
-                            {{-- バリデーションエラーでold()に文字列があれば表示 --}}
-                            <img id="image-preview" src="{{ asset(old('image')) }}" alt="選択された画像" />
-                        @elseif ($product->image)
-                            {{-- 通常時、またはエラーでold()がなければ既存の画像を表示 --}}
-                            <img id="image-preview" src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" />
+                        @if ($product->image)
+                            {{-- 既存の画像データがあれば、バリデーションエラーの有無にかかわらずそれを表示 --}}
+                            <img id="image-preview"
+                                src="{{ asset('storage/' . $product->image) }}"
+                                alt="{{ $product->name }}"
+                            />
                         @else
+                            {{-- 既存の画像データがない場合（新規登録など） --}}
                             <img id="image-preview" src="" alt="" />
                         @endif
 
